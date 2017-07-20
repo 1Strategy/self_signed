@@ -10,7 +10,6 @@ See the AWS documentation here:
 3. Calculate the Signature
 4. Add the Signing Information to the Request
 5. Conduct the API call
-
 """
 
 
@@ -61,7 +60,7 @@ except ProfileNotFound as pnf:
 
 if ACCESS_KEY is None or SECRET_KEY is None:
     print 'No access key is available.'
-    sys.exit()
+    sys.exit(1)
 
 
 def create_canonical_req():
