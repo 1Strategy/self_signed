@@ -40,17 +40,8 @@ REGION = 'us-west-2'
 ENDPOINT = 'search-ancestry-streaming-poc-yjhotcsza2y6n5zij6opeed3gm.us-west-2.es.amazonaws.com'
 PROFILE = 'training'
 PAYLOAD = {
-    "query" : {
-        "bool": {
-            "must": [{
-                "range": {
-                    "@timestamp": {
-                        "gte": "1-d/d",
-                        "lt": "now"
-                    }
-                }
-            }]
-        }
+    "query": {
+        "match_all": {}
     }
 }
 
