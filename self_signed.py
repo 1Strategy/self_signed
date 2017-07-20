@@ -200,6 +200,8 @@ def build_headers():
                                                  signature=sig)
     headers        = create_signed_headers(auth_header=authorization)
 
+    print(headers)
+
     return headers
 
 
@@ -210,7 +212,7 @@ def execute_api_call(signed_header):
     search = '/_search'
     method_string = 'http://' + es_host + search
     body = json.dumps(PAYLOAD)
-    print(method_string)
+
     req = requests.get(
         method_string,
         data=body,
